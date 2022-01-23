@@ -1,0 +1,91 @@
+/*
+Colors used:
+Primary Color (Almost Black): #222222;
+Secondary Color (White): #ffffff;
+Link Color (Tiffany Blue): #01C1B8;
+
+Typefaces used:
+font-family: 'Abril Fatface', cursive;
+font-family: 'Rubik', sans-serif;
+*/
+
+html {
+  font-size: 100%; /*16px*/
+}
+
+body {
+  background: white;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #222222;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 1.38rem;
+  line-height: 1.3;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small, .text_small {
+  font-size: 0.8rem;
+}
+
+img {
+  width: 100%;
+}
+
+a:link, a:visited {
+  color: #222222;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #01c1b8;
+}
+
+a:active {
+  color: #019890;
+}
+
+.button:link, .button:visited {
+  background-color: #222222;
+  color: #ffffff;
+  border: 1px solid #222222;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 200ms;
+}
+
+.button:hover, .button:active {
+  background-color: #ffffff;
+  color: #222222;
+  border: 1px solid #222222;
+}
