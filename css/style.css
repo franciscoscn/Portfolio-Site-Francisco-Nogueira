@@ -2,23 +2,44 @@
 Colors used:
 Primary Color (Almost Black): #222222;
 Secondary Color (White): #ffffff;
-Link Color (Tiffany Blue): #01C1B8;
+Link Color (Tiffany Blue): #01c1b8;
 
 Typefaces used:
 font-family: 'Abril Fatface', cursive;
 font-family: 'Rubik', sans-serif;
 */
-
 html {
-  font-size: 100%; /*16px*/
+  font-size: 100%;
+  /*16px*/
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 1px 3px 0px #777777;
 }
 
 body {
-  background: white;
+  background: #ffffff;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   line-height: 1.75;
   color: #222222;
+}
+
+footer {
+  text-align: center;
+}
+
+main {
+  padding-top: 133px;
 }
 
 p {
@@ -32,12 +53,13 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-family: 'Abril Fatface', cursive;
-  margin-top: 0;
+  /*margin-top: 0;*/
   font-size: 3.052rem;
 }
 
 h2 {
   font-size: 2.441rem;
+  text-align: center;
 }
 
 h3 {
@@ -60,20 +82,21 @@ img {
   width: 100%;
 }
 
-a:link, a:visited {
+a, a:visited {
   color: #222222;
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: #01c1b8;
+  color: #555555;
+  text-decoration: underline;
 }
 
 a:active {
-  color: #019890;
+  color: #777777;
 }
 
-.button:link, .button:visited {
+.button, .button:visited {
   background-color: #222222;
   color: #ffffff;
   border: 1px solid #222222;
@@ -89,3 +112,69 @@ a:active {
   color: #222222;
   border: 1px solid #222222;
 }
+
+/* Layout styling */
+.container {
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+#hero {
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+#hero h1 {
+  text-align: center;
+}
+
+#content {
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
+nav>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 15px;
+  text-transform: lowercase;
+  font-weight: 700;
+}
+
+.rounded_img {
+  border-radius: 50%;
+}
+
+.social_icons {
+  margin-top: 25px;
+}
+
+ .single_social_icon{
+   padding: 0 15px;
+ }
