@@ -15,6 +15,15 @@ html {
 
 * {
   box-sizing: border-box;
+  /* this makes it so that the width of elements already contain the border and padding */
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #222222;
 }
 
 header {
@@ -26,24 +35,12 @@ header {
   box-shadow: 0px 1px 3px 0px #777777;
 }
 
-body {
-  background: #ffffff;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
-  color: #222222;
-}
-
-footer {
-  text-align: center;
-}
-
 main {
   padding-top: 133px;
 }
 
-p {
-  margin-bottom: 1rem;
+footer {
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5 {
@@ -53,7 +50,6 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-family: 'Abril Fatface', cursive;
-  /*margin-top: 0;*/
   font-size: 3.052rem;
 }
 
@@ -74,12 +70,12 @@ h5 {
   font-size: 1.25rem;
 }
 
-small, .text_small {
-  font-size: 0.8rem;
+p {
+  margin-bottom: 1rem;
 }
 
-img {
-  width: 100%;
+small, .text_small {
+  font-size: 0.8rem;
 }
 
 a, a:visited {
@@ -96,7 +92,16 @@ a:active {
   color: #777777;
 }
 
+a.logo:hover, a.logo:focus, a.logo:active {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
 .button, .button:visited {
+  text-decoration: none;
   background-color: #222222;
   color: #ffffff;
   border: 1px solid #222222;
@@ -104,49 +109,17 @@ a:active {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  transition-duration: 200ms;
+  transition-duration: 150ms;
 }
 
 .button:hover, .button:active {
+  text-decoration: none;
   background-color: #ffffff;
   color: #222222;
   border: 1px solid #222222;
 }
 
-/* Layout styling */
-.container {
-  padding: 0 15px;
-  max-width: 1200px;
-}
-
-#work .row {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
-}
-
-#hero {
-  padding: 20px 0;
-  display: inline-block;
-  width: 100%;
-}
-
-#hero h1 {
-  text-align: center;
-}
-
-#content {
-  padding: 20px 0;
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
+/* ---------- layout styling ---------- */
 nav {
   display: inline-block;
   width: 100%;
@@ -167,6 +140,19 @@ nav>ul>li>a {
   font-weight: 700;
 }
 
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .rounded_img {
   border-radius: 50%;
 }
@@ -175,6 +161,166 @@ nav>ul>li>a {
   margin-top: 25px;
 }
 
- .single_social_icon{
-   padding: 0 15px;
- }
+.single_social_icon {
+  padding: 0 15px;
+}
+
+.berlin-illustration {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+#hero {
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+#hero span {
+  display: block;
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+#about {
+  border-bottom: 1px solid #4a4a4a;
+}
+
+#project {
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  main {
+    padding-top: 99px;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  #work h3 {
+    margin-top: 0;
+  }
+
+  #about h4 {
+    margin-top: 0;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 0 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* ========================================================= Animation */
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {}
