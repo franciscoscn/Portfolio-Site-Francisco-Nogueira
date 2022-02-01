@@ -32,7 +32,7 @@ header {
   background-color: #ffffff;
   position: fixed;
   width: 100%;
-  box-shadow: 0px 1px 3px 0px #777777;
+  box-shadow: 0px 1px 3px 0px #aaaaaa;
 }
 
 main {
@@ -41,6 +41,7 @@ main {
 
 footer {
   text-align: center;
+  margin-top: 10em;
 }
 
 h1, h2, h3, h4, h5 {
@@ -123,6 +124,8 @@ img {
 nav {
   display: inline-block;
   width: 100%;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 nav>ul {
@@ -149,12 +152,18 @@ nav>ul>li>a {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: 700;
+}
+
+.profile-picture {
+  display: block;
+  text-align: center;
 }
 
 .rounded_img {
   border-radius: 50%;
+  max-width: 300px;
 }
 
 .social_icons {
@@ -163,12 +172,6 @@ nav>ul>li>a {
 
 .single_social_icon {
   padding: 0 15px;
-}
-
-.berlin-illustration {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
 }
 
 #hero {
@@ -182,13 +185,26 @@ nav>ul>li>a {
   display: block;
 }
 
-#work .row {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
+#work {
+  margin-top: 6em;
 }
 
-#about {
-  border-bottom: 1px solid #4a4a4a;
+#work .row {
+  padding-bottom: 25px;
+  /* border-bottom: 1px solid #4a4a4a; */
+}
+
+#project-sword p {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+
+#project-sword h3 {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #project {
@@ -215,22 +231,35 @@ Medium devices (640px and larger)
   nav {
     width: auto;
     float: right;
-    margin-top: 4px;
+    margin-top: 7px;
+  }
+
+  nav>ul {
+    margin: 0;
   }
 
   main {
     padding-top: 99px;
   }
 
+  .col-md-12 {
+    width: 100%;
+  }
+
   .col-md-6 {
     width: 50%;
+  }
+
+  .inner-col {
+    border: 1px solid;
+    padding: 2em 1em;
   }
 
   #work h3 {
     margin-top: 0;
   }
 
-  #about h4 {
+  #about h5 {
     margin-top: 0;
   }
 
@@ -245,6 +274,30 @@ Medium devices (640px and larger)
     display: table;
   }
 }
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {}
 
 /* ========================================================= Animation */
 @keyframes color-change {
@@ -300,27 +353,3 @@ Medium devices (640px and larger)
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
-
-/* ==============================
-Large devices (1024px or larger)
-================================= */
-@media only screen and (min-width: 1024px) {
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .col-lg-7 {
-    width: 58.33%;
-  }
-
-  .col-lg-5 {
-    width: 41.66%;
-  }
-}
-
-/* ==============================
-X-large devices (1440px or larger)
-================================= */
-@media only screen and (min-width: 1440px) {}
